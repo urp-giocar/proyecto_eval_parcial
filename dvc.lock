@@ -1,0 +1,79 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: python src\preprocessing.py
+    deps:
+    - path: data\raw\Data_CU_venta.csv
+      hash: md5
+      md5: fdd106a1c6d2b3d1233a5b5527e22dde
+      size: 54525952
+    - path: src\preprocessing.py
+      hash: md5
+      md5: a1d5cb4ab40bc7d503f3c74b836664f1
+      size: 6692
+    outs:
+    - path: data\processed\test.csv
+      hash: md5
+      md5: ed50c930a5d68e471071c2b609d4b889
+      size: 10209817
+    - path: data\processed\train.csv
+      hash: md5
+      md5: 226696bb3e718ff8ca4df2f35b3b5b21
+      size: 17663670
+    - path: data\processed\valid.csv
+      hash: md5
+      md5: e8f4013005fde925d2c9355ba222e88c
+      size: 7572487
+  train:
+    cmd: python src\train.py --force
+    deps:
+    - path: data\processed\test.csv
+      hash: md5
+      md5: ed50c930a5d68e471071c2b609d4b889
+      size: 10209817
+    - path: data\processed\train.csv
+      hash: md5
+      md5: 226696bb3e718ff8ca4df2f35b3b5b21
+      size: 17663670
+    - path: data\processed\valid.csv
+      hash: md5
+      md5: e8f4013005fde925d2c9355ba222e88c
+      size: 7572487
+    - path: src\train.py
+      hash: md5
+      md5: 922fb46d2e63a5731e4cb0ef7a2d9187
+      size: 4168
+    outs:
+    - path: models\xgb_model.json
+      hash: md5
+      md5: 70f294790f6a65faf0bb46a090d1faff
+      size: 2123982
+    - path: models\xgb_model.pkl
+      hash: md5
+      md5: 342d5ea796a6933020b710f31aa4f24e
+      size: 1427166
+  drift:
+    cmd: python src\monitor_drift.py
+    deps:
+    - path: data\processed\test.csv
+      hash: md5
+      md5: ed50c930a5d68e471071c2b609d4b889
+      size: 10209817
+    - path: data\processed\train.csv
+      hash: md5
+      md5: 226696bb3e718ff8ca4df2f35b3b5b21
+      size: 17663670
+    - path: data\processed\valid.csv
+      hash: md5
+      md5: e8f4013005fde925d2c9355ba222e88c
+      size: 7572487
+    - path: src\monitor_drift.py
+      hash: md5
+      md5: 37156cabc960eb7a1726b9215150ee3e
+      size: 7002
+    outs:
+    - path: output\data_drift
+      hash: md5
+      md5: ab8bb786ee28d6450ceca85ed1cf7e78.dir
+      size: 18975
+      nfiles: 2

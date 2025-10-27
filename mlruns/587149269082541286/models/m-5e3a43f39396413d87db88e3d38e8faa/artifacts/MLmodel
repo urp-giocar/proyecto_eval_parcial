@@ -1,0 +1,23 @@
+artifact_path: "file:///G:/Mi unidad/Estudios/URP/4. Maestr\xEDa en Ciencia de Datos/Ciclos/Ciclo\
+  \ 04/2. Machine Learning Operations/_Evaluaci\xF3n Parcial/mlops_project/mlruns/587149269082541286/models/m-5e3a43f39396413d87db88e3d38e8faa/artifacts"
+flavors:
+  python_function:
+    data: model.xgb
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.9.13
+  xgboost:
+    code: null
+    data: model.xgb
+    model_class: xgboost.sklearn.XGBClassifier
+    model_format: xgb
+    xgb_version: 2.1.4
+mlflow_version: 3.1.4
+model_id: m-5e3a43f39396413d87db88e3d38e8faa
+model_size_bytes: 1423852
+model_uuid: m-5e3a43f39396413d87db88e3d38e8faa
+prompts: null
+run_id: 7a4a8572e9ab42f2a5f245c32ef2270e
+utc_time_created: '2025-10-27 03:04:40.999690'
