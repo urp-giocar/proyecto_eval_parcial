@@ -1,0 +1,11 @@
+artifact_location: file:///G:/Mi unidad/Estudios/URP/4. Maestría en Ciencia de Datos/Ciclos/Ciclo
+  04/2. Machine Learning Operations/_Evaluación Parcial/mlops_project/mlruns/587149269082541286/models/m-bde097a662e443eda88f0c44a3bcfe25/artifacts
+creation_timestamp: 1761527797650
+experiment_id: '587149269082541286'
+last_updated_timestamp: 1761527833052
+model_id: m-bde097a662e443eda88f0c44a3bcfe25
+model_type: null
+name: model
+source_run_id: 582a8e0f97d3476f9be123628647b714
+status: 2
+status_message: null

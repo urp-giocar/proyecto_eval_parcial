@@ -1,0 +1,15 @@
+artifact_uri: file:///G:/Mi unidad/Estudios/URP/4. Maestría en Ciencia de Datos/Ciclos/Ciclo
+  04/2. Machine Learning Operations/_Evaluación Parcial/mlops_project/mlruns/587149269082541286/1e7a7935a9454d8e897db0796dea932a/artifacts
+end_time: 1761528053023
+entry_point_name: ''
+experiment_id: '587149269082541286'
+lifecycle_stage: active
+run_id: 1e7a7935a9454d8e897db0796dea932a
+run_name: xgboost_local_run
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761528025723
+status: 3
+tags: []
+user_id: GIORGIO
