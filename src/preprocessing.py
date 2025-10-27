@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 
 # -------- Parámetros --------
-DATA_PATH   = r"G:\Mi unidad\Estudios\URP\4. Maestría en Ciencia de Datos\Ciclos\Ciclo 04\2. Machine Learning Operations\_Evaluación Parcial\mlops_project\data\raw\Data_CU_venta.csv"
+DATA_PATH   = r"G:\Mi unidad\URP-MLOPS\mlops_project\data\raw\Data_CU_venta.csv"
 TARGET_COL  = "target"
 PERIOD_COL  = "p_codmes"
 MISSING_TH  = 0.80                 # umbral: eliminar columnas con >80% NaN
@@ -170,7 +170,7 @@ print("\nTamaños ->",
 # - feature_cols
 
 # -------- Exportar splits a CSV --------
-OUTPUT_DIR = r"G:\Mi unidad\Estudios\URP\4. Maestría en Ciencia de Datos\Ciclos\Ciclo 04\2. Machine Learning Operations\_Evaluación Parcial\mlops_project\data\processed"
+OUTPUT_DIR = r"G:\Mi unidad\URP-MLOPS\mlops_project\data\processed"
 
 X_train.assign(target=y_train).to_csv(f"{OUTPUT_DIR}/train.csv", index=False)
 X_valid.assign(target=y_valid).to_csv(f"{OUTPUT_DIR}/valid.csv", index=False)

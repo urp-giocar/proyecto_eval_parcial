@@ -15,12 +15,12 @@ import mlflow.xgboost
 
 # -------- Configuración MLflow (LOCAL) --------
 # Guardará los experimentos en una carpeta local dentro de tu proyecto
-MLFLOW_TRACKING_DIR = r"G:\Mi unidad\Estudios\URP\4. Maestría en Ciencia de Datos\Ciclos\Ciclo 04\2. Machine Learning Operations\_Evaluación Parcial\mlops_project\mlruns"
+MLFLOW_TRACKING_DIR = r"G:\Mi unidad\URP-MLOPS\mlops_project\mlruns"
 mlflow.set_tracking_uri("file:///" + MLFLOW_TRACKING_DIR.replace("\\", "/"))
 mlflow.set_experiment("xgboost_local_experiment")
 
 # -------- Rutas de entrada --------
-DATA_DIR = r"G:\Mi unidad\Estudios\URP\4. Maestría en Ciencia de Datos\Ciclos\Ciclo 04\2. Machine Learning Operations\_Evaluación Parcial\mlops_project\data\processed"
+DATA_DIR = r"G:\Mi unidad\URP-MLOPS\mlops_project\data\processed"
 train_path = f"{DATA_DIR}/train.csv"
 valid_path = f"{DATA_DIR}/valid.csv"
 test_path  = f"{DATA_DIR}/test.csv"
@@ -90,7 +90,7 @@ with mlflow.start_run(run_name="xgboost_local_run"):
     # =========================
     # Guardar modelo entrenado
     # =========================
-    OUTPUT_DIR = r"G:\Mi unidad\Estudios\URP\4. Maestría en Ciencia de Datos\Ciclos\Ciclo 04\2. Machine Learning Operations\_Evaluación Parcial\mlops_project\models"
+    OUTPUT_DIR = r"G:\Mi unidad\URP-MLOPS\mlops_project\models"
     MODEL_NAME = "xgb_model"
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
