@@ -1,0 +1,5 @@
+outs:
+- md5: fdd106a1c6d2b3d1233a5b5527e22dde
+  size: 54525952
+  hash: md5
+  path: Data_CU_venta.csv
